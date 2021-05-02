@@ -8,7 +8,7 @@ from wearable_main.pi_graph_plot import plot_pi_graph
 plt.style.use("bmh")
 data_frame = pd.read_csv("wearable_data_60.csv")
 all_series = data_frame['Date']
-valid_data_series = list(set(all_series))
+valid_data_series = sorted(list(set(all_series)))
 
 print("\nTotal Valid Data Series We have " + str(len(valid_data_series)))
 
