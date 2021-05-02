@@ -1,3 +1,5 @@
+import calendar
+
 import numpy as np
 def plot_bar_graph(plt=None, data_frame=None, input_series=None):
 
@@ -17,7 +19,9 @@ def plot_bar_graph(plt=None, data_frame=None, input_series=None):
         plt.bar(heartrate_bar, heart_rate_list, bar_width, color="r", label="Average Heart Rate")
         plt.xlabel("Activity")
         plt.ylabel("Data")
-        plt.title("Activity Vs Data")
+        proper_date = input_series.split('/')[0] + " " + calendar.month_name[int(input_series.split('/')[1])][
+                                                         :3] + ". 20" + input_series.split('/')[2]
+        plt.title("Activity Vs Data (" + proper_date + ")")
         plt.xticks(cal_bar+bar_width, activity_list)
         plt.legend()
     else:
