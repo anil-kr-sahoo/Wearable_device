@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 
 def input_given(data_list=None):
     if data_list:
-        form = sg.FlexForm('Select Your Series Reference')
+        form = sg.FlexForm('Select Your Series Date')
         start_index = 0
         layout = list()
 
@@ -18,7 +18,7 @@ def input_given(data_list=None):
                 start_index += 10
 
         layout.append([sg.Text('')])
-        layout.append([sg.Text('Type Your Reference Series', size=(15, 1)), sg.InputText('')])
+        layout.append([sg.Text('Type Your Reference Date', size=(25, 1)), sg.InputText('')])
         layout.append([sg.Submit(), sg.Cancel()])
 
         button, values = sg.Window.Layout(self=form, rows=layout).Read()

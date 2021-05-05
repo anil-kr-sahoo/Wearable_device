@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+
 from bar_graph_plot import plot_bar_graph
 from scattered_graph_plot import plot_scattered_graph
 from user_input import input_given
-from wearable_main.pi_graph_plot import plot_pi_graph
+from pi_graph_plot import plot_pi_graph
 
 plt.style.use("bmh")
 data_frame = pd.read_csv("wearable_data_60.csv")
